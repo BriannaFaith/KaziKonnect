@@ -3,12 +3,37 @@ body{
   font-family: "Poppins", sans-serif;
   text-rendering: geometricPrecision;
   line-height: 1.4;
+
 }
 h1{
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 25px;
 }
+.search-container {
+  text-align:center;
+}
+.search-container input {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.search-container button {
+  background-color: #3490dc;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.search-container button:hover {
+  background-color: #2779bd;
+}
+
 h2{
   text-align: center;
 }
@@ -40,4 +65,28 @@ text-align: center;
 button:active,
 button:hover {
 outline: 0;
+}
+
+.applicationForm{
+  margin-top: 20 px;
+}
+.applicationForm form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.applicationForm label {
+  display: block;
+  margin-bottom:none;
+  font-size: 14px;
+  color: #333;
+}
+.applicationForm input {
+  width: 60%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
