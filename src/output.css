@@ -1,0 +1,14 @@
+body{
+  background-color: goldenrod;
+  font-family: "Poppins", sans-serif;
+  text-rendering: geometricPrecision;
+  line-height: 1.4;
+}
+h1{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+}
+h2{
+  text-align: center;
+}
