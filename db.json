@@ -1,0 +1,229 @@
+{
+    "jobs": [
+      {
+        "id": 1,
+        "title": "Software Engineer",
+        "company": "Safaricom",
+        "location": "Kisumu",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+      },
+      {
+        "id": 2,
+        "title": "Graphic Designer",
+        "company": "Design Studio",
+        "location": "Kitui",
+        "description": "Join our creative team as a graphic designer...",
+        "jobType": "Part-time",
+        "salary": "$45,000 - $60,000"
+      },
+      {
+        "id": 3,
+        "title": "Marketing Specialist",
+        "company": "AdvertiseNow",
+        "location": "Machakos",
+        "description": "Looking for a marketing specialist with experience in digital advertising...",
+        "jobType": "Full-time",
+        "salary": "$60,000 - $80,000"
+      },
+      {
+        "id": 4,
+        "title": "Data Analyst",
+        "company": "Data Insights",
+        "location": "Mwea",
+        "description": "Seeking a detail-oriented data analyst to interpret and analyze data...",
+        "jobType": "Full-time",
+        "salary": "$70,000 - $90,000"
+      },
+      {
+        "id": 5,
+        "title": "UX/UI Designer",
+        "company": "Creative Solutions",
+        "location": "Embu",
+        "description": "Join our design team as a UX/UI designer to create amazing user experiences...",
+        "jobType": "Full-time",
+        "salary": "$75,000 - $95,000"
+      },
+      {
+        "id": 6,
+        "title": "Front-end Developer",
+        "company": "WebTech",
+        "location": "Kisumu",
+        "description": "Looking for a front-end developer with expertise in HTML, CSS, and JavaScript...",
+        "jobType": "Full-time",
+        "salary": "$85,000 - $110,000"
+      },
+      {
+        "id": 7,
+        "title": "HR Specialist",
+        "company": "PeopleFirst",
+        "location": "Nakuru",
+        "description": "Seeking an experienced HR specialist to manage human resources processes...",
+        "jobType": "Full-time",
+        "salary": "$70,000 - $90,000"
+      },
+      {
+        "id": 8,
+        "title": "Sales Representative",
+        "company": "Safaricom",
+        "location": "Mombasa",
+        "description": "Join our sales team and drive revenue through effective sales strategies...",
+        "jobType": "Full-time",
+        "salary": "$60,000 - $80,000"
+      },
+      {
+        "id": 9,
+        "title": "Network Engineer",
+        "company": "Microsoft",
+        "location": "City I",
+        "description": "Looking for a skilled network engineer to design and implement computer networks...",
+        "jobType": "Full-time",
+        "salary": "$90,000 - $110,000"
+      },
+      {
+        "id": 10,
+        "title": "Content Writer",
+        "company": "ContentCreators",
+        "location": "Kisii",
+        "description": "Join our content team as a creative and skilled content writer...",
+        "jobType": "Part-time",
+        "salary": "$40,000 - $50,000"
+      },
+      {
+        "id": 11,
+        "title": "Accountant",
+        "company": "FinanceExperts",
+        "location": "Nairobi",
+        "description": "Seeking an experienced accountant to manage financial records and budgets...",
+        "jobType": "Full-time",
+        "salary": "$75,000 - $90,000"
+      },
+      {
+        "id": 12,
+        "title": "Customer Support Specialist",
+        "company": "HelpDesk",
+        "location": "Nairobi",
+        "description": "Join our customer support team to provide excellent service to our clients...",
+        "jobType": "Full-time",
+        "salary": "$50,000 - $65,000"
+      },
+      {
+        "id": 13,
+        "title": "Mobile App Developer",
+        "company": "Microsoft",
+        "location": "Kitale",
+        "description": "Looking for a mobile app developer with experience in iOS and Android development...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+      },
+      {
+        "id": 14,
+        "title": "Security Analyst",
+        "company": "SecureTech",
+        "location": "City N",
+        "description": "Seeking a security analyst to protect our systems and data from cyber threats...",
+        "jobType": "Full-time",
+        "salary": "$85,000 - $110,000"
+      },
+      {
+        "id": 15,
+        "title": "Software Engineer",
+        "company": "Microsoft",
+        "location": "Mombasa",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+
+      },
+      {
+        "id": 16,
+        "title": "Full Stack Developer",
+        "company": "Microsoft",
+        "location": "Mombasa",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+
+      },
+      {
+        "id": 17,
+        "title": "Data Analyst",
+        "company": "Microsoft",
+        "location": "Kakamega",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+
+      },
+      {
+        "id": 18,
+        "title": " Lead Manager",
+        "company": "Airtel Agency",
+        "location": "Mombasa",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+
+      },
+      {
+        "id": 19,
+        "title": "Sales Assistant",
+        "company": "Uji Mix",
+        "location": "Mombasa",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+
+      },
+      {
+        "id": 20,
+        "title": "Lead Actress",
+        "company": "Drama Studios",
+        "location": "Mombasa",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+
+      },
+      {
+        "id": 21,
+        "title": "Cleaner",
+        "company": "Microsoft",
+        "location": "Juja",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+
+      },
+      {
+        "id": 22,
+        "title": "Sales Assistant",
+        "company": "Safaricom",
+        "location": "Mombasa",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+
+      },
+      {
+        "id": 23,
+        "title": "Android Developer",
+        "company": "KOKO",
+        "location": "Kitale",
+        "description": "We are looking for a skilled software engineer...",
+        "jobType": "Full-time",
+        "salary": "$80,000 - $100,000"
+
+      },
+      {
+        "id": 24,
+        "title": "Java Developer",
+        "company": "InnovationLab",
+        "location": "Nairobi",
+        "description": "Join our research team as a scientist to conduct experiments and analyze data...",
+        "jobType": "Full-time",
+        "salary": "$95,000 - $120,000"
+      }
+    ]
+  }

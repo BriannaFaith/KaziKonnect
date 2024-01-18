@@ -1,43 +1,39 @@
-import axios from 'axios'
-// fetch data and create job listing menu
+import axios from 'axios';
 
-// Event listeners for displaying the job details
-document.addEventListener('DOMContentLoaded',()=>{
- const searchInput= document.getElementById('password');
- const searchButton= document.querySelector('.relative button');
- const resultsContainer= document.getElementById('resultsContainer');
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('password');
+  const searchButton = document.querySelector('.relative button');
+  const resultsContainer = document.getElementById('resultsContainer');
 
- searchButton.addEventListener('click', ()=>{
+  searchButton.addEventListener('click', async () => {
     const keywords = searchInput.value.trim();
 
-    if (keywords){
-        const options = {
-            method: 'GET',
-            url: 'https://rapid-linkedin-jobs-api.p.rapidapi.com/search-jobs',
-            params: {
-              keywords: 'keywords',
-              locationId: '92000000',
-              datePosted: 'anyTime',
-              sort: 'mostRelevant'
-            },
-            headers: {
-              'X-RapidAPI-Key': 'f6efd5410fmsh339842a87e3c8c6p177220jsn2c023beef688',
-              'X-RapidAPI-Host': 'rapid-linkedin-jobs-api.p.rapidapi.com'
-            }
-          };
+    if (keywords) {
+      const options = {
+        method: 'GET',
+        url: 'https://rapid-linkedin-jobs-api.p.rapidapi.com/search-jobs',
+        params: {
+          keywords: 'keywords',
+          locationId: '92000000',
+          datePosted: 'anyTime',
+          sort: 'mostRelevant'
+        },
+        headers: {
+          'X-RapidAPI-Key': 'f6efd5410fmsh339842a87e3c8c6p177220jsn2c023beef688',
+          'X-RapidAPI-Host': 'rapid-linkedin-jobs-api.p.rapidapi.com'
+        }
+      };
 
-        axios.request(options)
-        .then(response => {
-          console.log(response.data);
-          resultsContainer.innerHTML = JSON.stringify(response.data, null, 2);
-        })
-        .catch(error => {
-          console.error(error);
-        });
+      try {
+        const response = await axios.request(options);
+        console.log(response.data);
+        resultsContainer.innerHTML = JSON.stringify(response.data, null, 2);
+      } catch (error) {
+        console.error(error);
+      }
     }
- })
-})
-// function to display details of job listing
+  });
+// function to display details of job search results
 function displayResults(data) {
     const resultsContainer = document.getElementById('resultsContainer');
 
@@ -61,24 +57,30 @@ function displayResults(data) {
 //[company image, job title,location, No of applicants]
 //view job roles- button- click
 //Apply Now- button - click
-const applyBtn = document.createElement('button');
-        applyBtn.classList.add('btn');
-        applyBtn.textContent = 'Apply Now';
-        applyBtn.addEventListener('click', () => {
 
-            console.log('Apply Now clicked');
-            toggleForm(); // Show the application form on Apply Now click
-        });
 //Submit Application-click
 function toggleForm() {
-    var formContainer = document.getElementById("applicationForm");
-    formContainer.style.display = formContainer.style.display === "none" ? "block" : "none";
+  const formContainer = document.getElementById("applicationForm");
+  formContainer.style.display = formContainer.style.display === "none" ? "block" : "none";
 }
 
-//alert box - alerts the user upon successful application
-function submitApplication(){
-    console.log('Application submitted successful')
-    alert('Application submitted successfully!');
-    toggleForm();
+const applyBtn = document.createElement('button');
+applyBtn.classList.add('btn');
+applyBtn.textContent = 'Apply Now';
+applyBtn.addEventListener('click', () => {
+  console.log('Apply Now clicked');
+  toggleForm(); // Show the application form on Apply Now click
+});
 
+// Submit Application-click
+function toggleForm() {
+  var formContainer = document.getElementById("applicationForm");
+  formContainer.style.display = formContainer.style.display === "none" ? "block" : "none";
 }
+
+// alert box - alerts the user upon successful application
+function appliedSuccessfully() {
+  console.log('Application submitted successfully')
+  alert('Application submitted successfully!');
+  toggleForm();
+});

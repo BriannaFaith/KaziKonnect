@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,36 +8,40 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css">
 </head>
 <body>
-    <!-- html elements -->
+    <-- html elements >
     <h1 class>KAZI KONNECT</h1>
-    <div class="search-container">
-        <div class="min-w-screen min-h-screen bg-gray-800 flex items-center justify-center px-5 py-5">
-            <div class="w-full mx-auto rounded-xl bg-gray-100 shadow-lg p-10 text-gray-800 relative overflow-hidden resize-x min-w-80 max-w-3xl" x-data="app()" x-init="generatePassword()">
-                <div class="relative mt-1">
-                    <input type="text" id="password" class="w-full pl-3 pr-10 py-2 border-2 border-gray-200 rounded-xl hover:border-gray-300 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Search for job openings...">
-                    <button class="block w-7 h-7 text-center text-xl leading-0 absolute top-2 right-2 text-gray-400 focus:outline-none hover:text-gray-900 transition-colors"><i class="mdi mdi-magnify"></i></button>
-                </div>
-            </div>
+
+    <div id="searchContainer">
+        <form id="jobSearchForm">
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" placeholder="Enter job title" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter location" required>
+
+            <button type="button" onclick="searchJobs()">Search</button>
+        </form>
+
         </div>
-    </div>
+
     <div id="resultsContainer">
-        <h3 >Search Results</h3>
+        <ul id="jobList"></ul>
     </div>
+
     <div container="jobs">
         <h2 id>View Available Job Openings</h2>
         <div class="jobListing">
-            <img id="poster" src="/assets/placeholderImage (1).png"alt="Company Poster">
             <div>
                 <h3 id=" jobtitle"></h2>
                     <p id="company"></p>
                     <p id="location"> </p>
                     <p id="noOfApplicants"> </p>
                     <button id="viewRolesBtn"class="btn">View Job Roles</button>
-                    <button id="applyBtn" class="btn">Apply</button>
+                    <button id="applyBtn" class="btn" onclick="showApplicationForm()">Apply</button>
 
             </div>
 
-    </div>
+    </div->
 
 <div class="applicationForm" id="applicationForm">
         <form>
@@ -59,7 +63,69 @@
                     <button id="submit" class="btn">Submit Application</button>
                 </div>
         </form>
-</div>
-    <script type="module" src="/index.js"></script>
+</div->
+
+<script src="script.js"></script>
+
+</body>
+</html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazi Konnect</title>
+    <link href="./output.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1 class>KAZI KONNECT</h1>
+
+    <div id="searchContainer">
+        <form id="jobSearchForm">
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" placeholder="Enter job title">
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter location">
+
+            <button type="button" onclick="searchJobs()">Search</button>
+        </form>
+    </div>
+    <ul id="jobList"> Search Results</ul>
+    <div id="resultsContainer" class="grid-container"></div>
+
+    <div class="modal" id="applicationFormModal" style="display: none;">
+        <div class="modal-content">
+            <form>
+                <div class="grid gap-6 mb-6 lg:grid-cols-2">
+                    <div>
+                        <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">First name</label>
+                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
+                    </div>
+                        <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Last name</label>
+                        <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required>
+                        <div>
+                            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone number</label>
+                            <input type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="+254-700-000-000" pattern="\+254\d{9}" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email address</label>
+                            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required>
+                        </div>
+                        <button id="submit" class="btn">Submit Application</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <div id="successMessage" style="display: none;">
+        <p>Application submitted successfully!</p>
+    </div>
+
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
