@@ -9,28 +9,41 @@ function fetchJobsData() {
         })
         .catch(error => {
             console.error('Error fetching jobs:', error);
-            // Handle error here (e.g., display a user-friendly message)
         });
 }
 
 // Display job details in the results container
 function displayJobDetails(jobs) {
     const resultsContainer = document.getElementById('resultsContainer');
-    resultsContainer.innerHTML = ''; // Clear previous results
+    const messageElement = document.getElementById('noJobsMessage');
 
-    jobs.forEach(job => {
-        const jobElement = document.createElement('div');
-        jobElement.classList.add('grid-item'); // Add grid-item class
-        jobElement.innerHTML = `
-            <h3>${job.title}</h3>
-            <p>Company: ${job.company}</p>
-            <p>Location: ${job.location}</p>
-            <button class="btn" onclick="viewJobRoles('${job.description}')">View Job Roles</button>
-            <button class="btn" onclick="showApplicationForm()">Apply</button>
-        `;
+    // Clear previous results
+    resultsContainer.innerHTML = '';
 
-        resultsContainer.appendChild(jobElement);
-    });
+    if (messageElement) {
+        messageElement.style.display = 'none';
+
+        if (jobs.length === 0) {
+            // Display message when no jobs are found
+            messageElement.style.display = 'block';
+        }
+    }
+
+    if (jobs.length > 0) {
+        jobs.forEach(job => {
+            const jobElement = document.createElement('div');
+            jobElement.classList.add('grid-item'); // Add grid-item class
+            jobElement.innerHTML = `
+                <h3>${job.title}</h3>
+                <p>Company: ${job.company}</p>
+                <p>Location: ${job.location}</p>
+                <button class="btn" onclick="viewJobRoles('${job.description}')">View Job Roles</button>
+                <button class="btn" onclick="showApplicationForm()">Apply</button>
+            `;
+
+            resultsContainer.appendChild(jobElement);
+        });
+    }
 }
 
 // Fetch jobs based on user input and display results
@@ -47,12 +60,15 @@ function searchJobs() {
         });
 
         displayJobDetails(filteredJobs);
+
+        // Clear the search input
+        document.getElementById('jobTitle').value = '';
+        document.getElementById('location').value = '';
     });
 }
 
 // Display job roles when "View Job Roles" button is clicked
 function viewJobRoles(description) {
-    // You can replace this with your desired way of displaying the description
     alert(description);
 }
 
@@ -66,20 +82,26 @@ function showApplicationForm() {
 
 // Submit the application form
 function submitApplication() {
-    // Your submission logic goes here
-
     // Display success message
-    const successMessage = document.getElementById('successMessage');
-    successMessage.style.display = 'block';
+    const successModal = document.getElementById('successModal');
+    successModal.style.display = 'block';
 
     // Close the application form after 2 seconds
-    setTimeout(closeApplicationForm, 2000);
+    setTimeout(() => {
+        successModal.style.display = 'none';
+        closeApplicationForm();
+    }, 2000);
 }
 
 // Close the application form
 function closeApplicationForm() {
     const applicationFormModal = document.getElementById('applicationFormModal');
     applicationFormModal.style.display = 'none';
+
+    resetApplicationForm();
+
+    const successModal = document.getElementById('successModal');
+    successModal.style.display = 'none';
 }
 
 // Reset the application form
@@ -89,20 +111,17 @@ function resetApplicationForm() {
     document.getElementById('last_name').value = '';
     document.getElementById('phone').value = '';
     document.getElementById('email').value = '';
-
-    // Clear the success message
-    const successMessage = document.getElementById('successMessage');
-    successMessage.style.display = 'none';
 }
 
+// Uncomment the following lines to add the event listener for the submit button
 document.getElementById('submit').addEventListener('click', function (event) {
     event.preventDefault(); // Prevent the form from submitting (default behavior)
 
     // You can add your logic for handling the form submission here
 
     // Show the success message
-    const successMessage = document.getElementById('successMessage');
-    successMessage.style.display = 'block';
+    const successModal = document.getElementById('successModal');
+    successModal.style.display = 'block';
 
     // Close the form after 2 seconds (2000 milliseconds)
     setTimeout(closeApplicationForm, 2000);
