@@ -5,6 +5,7 @@ Faith Ogendi
 A web app that manages job searches.
 
 ## Description
+Welcome to Kazi Konnect, a simple and intuitive job search web application designed to help users discover and apply for job opportunities effortlessly. This web app fetches job data from a local JSON file, allowing users to search for jobs based on titles and locations. Users can explore job details, view roles, and submit applications through a user-friendly interface.
 
 ## Set Up Instructions
 1.Clone the Repository- `bash
@@ -27,3 +28,4 @@ HTML
 CSS
 Javascript
 Json
+

@@ -113,7 +113,7 @@ function resetApplicationForm() {
     document.getElementById('email').value = '';
 }
 
-// Uncomment the following lines to add the event listener for the submit button
+// event listener for the submit button
 document.getElementById('submit').addEventListener('click', function (event) {
     event.preventDefault(); // Prevent the form from submitting (default behavior)
 
