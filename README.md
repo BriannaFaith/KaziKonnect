@@ -9,7 +9,7 @@ Welcome to Kazi Konnect, a simple and intuitive job search web application desig
 
 ## Set Up Instructions
 1.Clone the Repository- `bash
-   git clone https://github.com/your-username/kazikonnect-job-search-app.git
+   git clone https://github.com/BriannaFaith/KaziKonnect.git
    cd kazikonnect-job-search-app
 2.Open index.html in your Browser:
 Open the index.html file in your preferred web browser to access the app.
