@@ -121,7 +121,6 @@ outline: 0;
   border-radius: 5px;
   background-color: #f8f8f8;
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -131,7 +130,6 @@ outline: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 .modal-content {
   background-color: rgb(150, 150, 190);
   max-width: 600px;
