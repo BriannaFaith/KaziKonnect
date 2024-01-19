@@ -24,7 +24,7 @@ function displayJobDetails(jobs) {
         messageElement.style.display = 'none';
 
         if (jobs.length === 0) {
-            // Display message when no jobs are found
+            // Displays a  message when no jobs are found
             messageElement.style.display = 'block';
         }
     }
