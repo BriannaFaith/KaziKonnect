@@ -1,4 +1,4 @@
-// Fetch data from the local JSON file
+// Fetching data from the local JSON file
 function fetchJobsData() {
     return fetch('http://localhost:3000/jobs')
         .then(response => {
@@ -13,7 +13,7 @@ function fetchJobsData() {
 }
 
 // Display job details in the results container
-//function displayJobDetails(jobs) {
+function displayJobDetails(jobs) {
     const resultsContainer = document.getElementById('resultsContainer');
     const messageElement = document.getElementById('noJobsMessage');
 
