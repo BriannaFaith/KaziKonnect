@@ -32,7 +32,7 @@ function displayJobDetails(jobs) {
     if (jobs.length > 0) {
         jobs.forEach(job => {
             const jobElement = document.createElement('div');
-            jobElement.classList.add('grid-item'); // Add grid-item class
+            jobElement.classList.add('grid-item');
             jobElement.innerHTML = `
                 <h3>${job.title}</h3>
                 <p>Company: ${job.company}</p>
@@ -46,7 +46,7 @@ function displayJobDetails(jobs) {
     }
 }
 
-// Fetch jobs based on user input and display results
+// Fetch jobs based on location , job title and display results
 function searchJobs() {
     const jobTitle = document.getElementById('jobTitle').value;
     const location = document.getElementById('location').value;
@@ -61,7 +61,7 @@ function searchJobs() {
 
         displayJobDetails(filteredJobs);
 
-        // Clear the search input
+        // Clears  the search input
         document.getElementById('jobTitle').value = '';
         document.getElementById('location').value = '';
     });
@@ -115,9 +115,8 @@ function resetApplicationForm() {
 
 // event listener for the submit button
 document.getElementById('submit').addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent the form from submitting (default behavior)
-
-    // You can add your logic for handling the form submission here
+    //Prevent the form from submitting (default behavior)
+    event.preventDefault();
 
     // Show the success message
     const successModal = document.getElementById('successModal');
